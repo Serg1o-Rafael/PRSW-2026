@@ -1,4 +1,7 @@
 //Declaração de variáveis
+
+//var é um comando do javascript para declarar variável global
+//let é um comando do javascript para declarar variável local
 var a = 10
 var b = 20
 var c = 0
