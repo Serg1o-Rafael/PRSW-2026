@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Date dp Javascript</title>
+    <script type="text/javascript">
+
+      let intSemana, strSemana
+
+     /* Objeto Date() do javascript contém métodos (funções) relacionadas a data e hora do sistema computacional.
+      O operador new é um comando do javascript que instancia uma classe, que neste caso, instancia a classe Date. Instanciar é desembrulhar/ desencapsular uma classe, ou seja, a classe aberta para ser utilizada, se torna um objeto.  */
+
+      let data = new Date()
+      intSemana = data.getDay()
+
+        /* Este método contém valor numérico inteiro do dia da semana, como por exemplo, domingo que representa o valor 0, segunda-feira valor1, e assim por diante até Sábado, que representa o valor 6. */
+
+        switch(intSemana) {
+            case 0 :
+                strSemana = "Domingo"
+            break
+
+            case 1 :
+                strSemana = "Segunda-feira"
+            break
+
+            case 2 :
+                strSemana = "Terça-feira"
+            break
+
+            case 3 :
+               strSemana = "Quarta-feira"
+            break
+
+            case 4 :
+               strSemana = "Quinta-feira"
+            break
+
+            case 5 :
+               strSemana = "Sexta-feira"
+            break
+
+            case 6 :
+                strSemana = "Sábado" 
+        }
+
+                document.write( "hoje é " + strSemana)
+           
+          
+
+        
+
+    </script>
+</head>
+<body>
+
+
+
+
+</body>
+</html>
