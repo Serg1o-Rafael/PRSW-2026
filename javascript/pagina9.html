@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Date dp Javascript</title>
+    <link rel="stylesheet" href="estilo_script.css">
+    <script type="text/javascript">
+
+      let intMes, strMes
+
+     /* Objeto Date() do javascript contém métodos (funções) relacionadas a data e hora do sistema computacional.
+      O operador new é um comando do javascript que instancia uma classe, que neste caso, instancia a classe Date. Instanciar é desembrulhar/ desencapsular uma classe, ou seja, a classe aberta para ser utilizada, se torna um objeto.  */
+
+      let data = new Date()
+      intMes = data.getMonth()
+
+        /* Este método contém valor numérico inteiro do dia da semana, como por exemplo, domingo que representa o valor 0, segunda-feira valor1, e assim por diante até Sábado, que representa o valor 6. */
+
+        switch(intMes) {
+            case 0 :
+                strMes = "Janeiro"
+            break
+
+            case 1 :
+                strMes = "Fevereiro"
+            break
+
+            case 2 :
+                strMes = "Março"
+            break
+
+            case 3 :
+               strMes = "Abril"
+            break
+
+            case 4 :
+               strMes = "Maio"
+            break
+
+            case 5 :
+               strMes = "Junho"
+            break
+
+            case 6 :
+                strMes = "Julho" 
+            break    
+            case 7 :
+                strMes = "Agosto" 
+            break    
+            case 8 :
+                strMes = "Setembro" 
+            break    
+            case 9 :
+                strMes = "Outubro" 
+            break    
+            case 10 :
+                strMes = "Novembro" 
+            break    
+            case 11 :
+                strMes = "Dezembro" 
+              
+             
+        }
+
+               
+           
+          
+
+        
+
+    </script>
+</head>
+<body>
+
+<section>
+    <script>  document.write( "O mês é " + strMes)</script>
+</section>
+
+
+</body>
+</html>
