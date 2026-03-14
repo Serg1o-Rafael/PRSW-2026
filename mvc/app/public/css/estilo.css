@@ -1,0 +1,33 @@
+body {
+    background-color: #ee6b51;
+}
+
+#titulo {
+    text-align: center;
+    font-family: "Comic Sans MS";
+    font-size: 32px
+}
+
+#container {
+    margin: auto;
+    width: 20%;
+    border: 1px solid #e5f6cf;
+}
+
+p{
+    font-family: arial;
+    font-size: 16px;
+}
+
+#menu {
+    text-align: center;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+a{
+    font-family: verdana;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
