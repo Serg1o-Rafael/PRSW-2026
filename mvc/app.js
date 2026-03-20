@@ -7,6 +7,8 @@
     A funcao require diz para o servidor web que este arquivo poderá utilizar todos os objetos e funcoes de um determinado modulo.
  */
 const express = require("express")
+
+const rota = require("./app/routes/router")
  
 // Criar a variavel (que é uma constante) de aplicacao do projeto
 const aplicacao = express()
@@ -19,11 +21,12 @@ aplicacao.use(express.static("./app/public"))
 aplicacao.set("view engine", "ejs") // O aplicativo está definindo que o view engine interpretará o template (modelo) ejs
 
 // views é a pasta que contém arquivos ejs
-aplicacao.set("views")
+aplicacao.set("views", "./app/public/views")
 
 // via de acesso para comunicacao entre cliente (navegador) e o servidor web (nodeJS)
 const viaConexao = 3000
 
+aplicacao.use("/", rota)
 
 //Função que executa o servidor web que fica na escuta de um provável solicitação de recursos
 aplicacao.listen(viaConexao, () => {
