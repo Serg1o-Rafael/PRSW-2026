@@ -9,6 +9,8 @@
 const express = require("express")
 
 const rota = require("./app/routes/router")
+
+const rotalHome = require ("./app/routes/homeRoutes")
  
 // Criar a variavel (que é uma constante) de aplicacao do projeto
 const aplicacao = express()
@@ -21,7 +23,7 @@ aplicacao.use(express.static("./app/public"))
 aplicacao.set("view engine", "ejs") // O aplicativo está definindo que o view engine interpretará o template (modelo) ejs
 
 // views é a pasta que contém arquivos ejs
-aplicacao.set("views", "./app/public/views")
+aplicacao.set("views", "./app/views")
 
 // via de acesso para comunicacao entre cliente (navegador) e o servidor web (nodeJS)
 const viaConexao = 3000
