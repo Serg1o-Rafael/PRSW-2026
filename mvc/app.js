@@ -8,10 +8,13 @@
  */
 const express = require("express")
 
-const rota = require("./app/routes/router")
+//const rota = require("./app/routes/router")
 
-const rotalHome = require ("./app/routes/homeRoutes")
+
+const rotaHome = require ("./app/routes/homeRoutes")
  
+const rotaCadCliente = require("./app/routes/cadClienteRoutes")
+
 // Criar a variavel (que é uma constante) de aplicacao do projeto
 const aplicacao = express()
 
@@ -28,7 +31,9 @@ aplicacao.set("views", "./app/views")
 // via de acesso para comunicacao entre cliente (navegador) e o servidor web (nodeJS)
 const viaConexao = 3000
 
-aplicacao.use("/", rota)
+aplicacao.use("/", rotaHome)
+
+aplicacao.use("/", rotaCadCliente)
 
 //Função que executa o servidor web que fica na escuta de um provável solicitação de recursos
 aplicacao.listen(viaConexao, () => {
