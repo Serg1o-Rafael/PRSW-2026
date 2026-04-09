@@ -2,11 +2,6 @@ body {
     background-color: #ee6b51;
 }
 
-#titulo {
-    text-align: center;
-    font-family: "Comic Sans MS";
-    font-size: 32px
-}
 
 #container {
     margin: auto;
@@ -31,3 +26,66 @@ a{
     color: #fff;
     text-decoration: none;
 }
+body {
+    background-color: #ee6b51;
+}
+ 
+#titulo {
+    text-align: center;
+    font-family: "Comic Sans MS";
+    font-size: 32px
+}
+ 
+#container {
+    margin: auto;
+    width: 20%;
+    border: 1px solid #e5f6cf;
+}
+ 
+p{
+    font-family: arial;
+    font-size: 16px;
+}
+ 
+#menu {
+    text-align: center;
+    font-size: 12px;
+    text-decoration: none;
+}
+ 
+a{
+    font-family: verdana;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+ 
+#caixa_formulario {
+    margin: auto;
+    width: 30%;
+    font-family: arial;
+    font-size: 1em;
+ 
+}
+ 
+#caixa_formulario label {
+    display: block;
+    margin: 10px 0px 0px 0px;
+}
+ 
+input {
+    background-color: #fff;
+    font-family: arial;
+    border-radius: 7px;
+    color: #ee6b51;
+}
+ 
+button {
+    background-color: #000;
+    font-family: verdana;
+    border-radius: 7px;
+    font-size: 0.8em;
+    color: #fff;
+    cursor: pointer;
+}
+ 

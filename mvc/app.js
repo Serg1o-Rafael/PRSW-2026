@@ -1,41 +1,44 @@
-/**
-    express é um módulo NPM (Node Package Manager), traduzindo, gerenciador de pacotes NODE JS.
-    Dentro de cada módulo de um arquivo (arquivo), há uma coleção de objetos e funções prontas para serem utilizadas.
-    Express é o principal modulo NPM, Ou seja, quando instalado ele cria uma pasta com varios outros modulos.
-    Essa pasta é denominada node_modules.
- 
-    A funcao require diz para o servidor web que este arquivo poderá utilizar todos os objetos e funcoes de um determinado modulo.
- */
+
 const express = require("express")
-
-//const rota = require("./app/routes/router")
-
-
-const rotaHome = require ("./app/routes/homeRoutes")
  
-const rotaCadCliente = require("./app/routes/cadClienteRoutes")
-
+const rota = require("./app/routes/router")
+ 
 // Criar a variavel (que é uma constante) de aplicacao do projeto
+ 
 const aplicacao = express()
-
-
-//Acesso aos arquivos CSS e Imagens
+ 
+// Acesso aos arquivos CSS e imagens
 aplicacao.use(express.static("./app/public"))
-
-// view engine(espéie de um navegador do back end) é o interpretador de páginas EJS (html no lado servidor, ou seja, é um html do back end) 
-aplicacao.set("view engine", "ejs") // O aplicativo está definindo que o view engine interpretará o template (modelo) ejs
-
-// views é a pasta que contém arquivos ejs
+ 
+// view engine ( Especie de um navegador do back end) é o interpretador de páginas e (EJS) => HTML do lado Servidor, ou seja, é um html do back end.
+aplicacao.set("view engine", "ejs") // o aplicativo está definindo que o view engine interpretará o template (modelo) ejs  
+ 
+// view é a pasta que coném arquivos ejs
 aplicacao.set("views", "./app/views")
+
+/* JSON analisa os dados do formulário que ficam no corpo da solicitação (método POST), também denominado request da entrada para ser enviado ao servidor web */
+aplicacao.use(express.json())
+
+/* a linha de comando abaixo é utilizado para ler os dados do formulário */
+/* Extended true significa que a função urlencoded conseguiu d+ecifrar, ou seja, entender os dados do formulário*/
+aplicacao.use(express.urlencoded({extended: true}))
+
 
 // via de acesso para comunicacao entre cliente (navegador) e o servidor web (nodeJS)
 const viaConexao = 3000
-
-aplicacao.use("/", rotaHome)
-
-aplicacao.use("/", rotaCadCliente)
-
-//Função que executa o servidor web que fica na escuta de um provável solicitação de recursos
+ 
+aplicacao.use("/", rota)
+ 
+// Funcao que executa o servidor web que fica na escuta uma provavel solicitacao de recursos por parte do navegador
+ 
 aplicacao.listen(viaConexao, () => {
-    console.log("Servidor web rodando e escutando na porta " + viaConexao)
+    console.log("Servidor rodando e escutando na porta " + viaConexao)
+
+/*     JSON tem por finalidade obter dados do formulário que são atribuidos as variáveis*/
+var nome_cliente = req.body.nome
+var cpf_cliente = req.body.cpf
+var senha_cliente = req.body.senha
+var confrimasenha_cliente = req.body.confirmasenha
 })
+ 
+
