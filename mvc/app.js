@@ -34,11 +34,7 @@ aplicacao.use("/", rota)
 aplicacao.listen(viaConexao, () => {
     console.log("Servidor rodando e escutando na porta " + viaConexao)
 
-/*     JSON tem por finalidade obter dados do formulário que são atribuidos as variáveis*/
-var nome_cliente = req.body.nome
-var cpf_cliente = req.body.cpf
-var senha_cliente = req.body.senha
-var confrimasenha_cliente = req.body.confirmasenha
+
 })
  
 

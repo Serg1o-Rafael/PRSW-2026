@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Document</title>
+    <title>Dados do Formulário</title>
 </head>
 <body>
     <header>
@@ -13,27 +12,34 @@
         </nav>
     </header>
     <section>
-        <h1 id="titulo">Cadastro de Clientes</h1>
+        <h1 id="titulo">Dados do Formulário</h1>
     </section>
-    
-    <section id="caixa_formulario">
-        <form action="/add_cliente" method="post">
-
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" size="30" maxlength="70">
-
-               <label for="nome">CPF</label>
-            <input type="text" name="cpf" id="cpf" size="11" maxlength="11">
-
-               <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" size="8" maxlength="8">
-
-               <label for="confirmasenha">Confirma senha</label>
-            <input type="password" name="confirmasenha" id="confirmasenha" size="8" maxlength="8">
-
-            <button type="submit">Cadastrar</button>
-        </form>
+ 
+    <section id="tabela_clientes">
+        <section class="container_clientes">
+            Nome do Cliente:
+        </section>
+        <section class="container_clientes">
+            <%= nome_cliente %> <!-- Nome do cliente vindo do formulário Cadastro de Clientes -->
+        </section>
+        <section class="container_clientes">
+            CPF do Cliente:
+        </section>
+        <section class="container_clientes">
+            <%= cpf_cliente %> <!-- CPF do cliente vindo do formulário Cadastro de Clientes -->
+        </section>
+        <section class="container_clientes">
+            Senha do Cliente:
+        </section>
+        <section class="container_clientes">
+            <%= senha_cliente %> <!-- Senha vinda do formulário -->
+        </section>
+        <section class="container_clientes">
+            Confirma Senha do Cliente: <!-- Senha vinda do formulário -->
+        </section>
+        <section class="container_clientes">
+            <%= confirmasenha_cliente %> <!-- Senha vinda do formulário -->
+        </section>
     </section>
-
 </body>
 </html>
