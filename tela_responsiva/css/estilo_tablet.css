@@ -1,0 +1,33 @@
+#caixa_grid {
+    grid-template-columns: auto auto auto;
+    grid-gap: 6px;
+    border: 1px dashed #47b6ee;
+    background-color: #4a0fb9
+}
+
+#caixa_grid > section {
+    border: 1px double #1f1256;
+    background-color: #e5c3c3;
+    color: black;                                                 
+}
+
+#celula1{
+    border-top-left-radius: 15px;
+}
+
+#celula3{
+    border-top-right-radius: 15px;
+}
+
+
+#celula10{
+    border-bottom-right-radius: 15px;
+}
+
+#paragrafo{
+    font-size: 1em;
+}
+
+#titulo{
+    font-size: 1.25em;
+}
