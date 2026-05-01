@@ -16,6 +16,6 @@ rota.get('/cadastro', cadClienteController.formCadastroCliente)
 rota.get('/cadastro' , addClienteController.addClienteCadastro)
 rota.get('/confirma', confirmaSenhaController.confirmaSenhaCliente)
 //rota bora peixada
-rota.get('/vamossfc', vamossfcController.vamossfcAgradece)
+rota.post('/vamossfc', vamossfcController.vamossfcAgradece)
 module.exports = rota
 
