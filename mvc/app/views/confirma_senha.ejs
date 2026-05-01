@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <title>Confirma Senha</title>
+</head>
+<body>
+    <section id="caixa_formulario">
+        <form action="/vamossfc.ejs" method="POST" onsubmit="return verificaConfirmaSenha()">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" size="10" maxlength="6" required>
+            
+            <label for="confirmasenha">Confirma Senha</label>
+            <input type="password" name="confirmasenha" id="confirmasenha" size="10" maxlength="6" required>
+            
+            <label for=""></label>
+            <button type="submit">Cadastrar</button>
+
+            
+        </form>
+        <img src="img/pessoa2.png" alt="">
+        <p id="mensagem"></p>
+    </section>
+</body>
+</html>
