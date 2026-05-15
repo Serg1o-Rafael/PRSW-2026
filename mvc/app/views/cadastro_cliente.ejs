@@ -32,7 +32,7 @@
                 
         <form action="/add_cliente" method="post">
             <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" value="<%= dadoDigitado.nome%> || '' %>" size="30" maxlength="70">
+            <input type="text" name="nome" id="nome" value="<%= dadoDigitado.nome  || '' %>" size="30" maxlength="70">
 
             <label for="cpf">CPF</label>
             <input type="text" name="cpf" id="cpf" value="<%= dadoDigitado.cpf || '' %>" size="11" maxlength="11">

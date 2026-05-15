@@ -1,4 +1,11 @@
-
+/*
+    express é um modulo NPM (Node Package Manager), traduzindo, gerenciador de pacotes NODE JS.
+    Dentra de cada modulo que um arquivo (arquivo), há uma colecao de objetos e funções prontas para serem utilizadas.
+    Express é o principal modulo NPM, Ou seja, quando instalado ele cria uma pasta com varios outros modulos.
+    Essa pasta é denominada node_modules.
+ 
+    A funcao require diz para o servidor web que este arquivo poderá utilizar todos os objetos e funcoes de um determinado modulo.
+ */
 const express = require("express")
  
 const rota = require("./app/routes/router")
@@ -15,16 +22,20 @@ aplicacao.set("view engine", "ejs") // o aplicativo está definindo que o view e
  
 // view é a pasta que coném arquivos ejs
 aplicacao.set("views", "./app/views")
-
-/* JSON analisa os dados do formulário que ficam no corpo da solicitação (método POST), também denominado request da entrada para ser enviado ao servidor web */
+ 
+/*
+    JSON analisa os dados do formulário que ficam no corpo da solicitação (método POST),
+    tambem denominado request de entrada para ser enviado para o Servidor Web
+*/
 aplicacao.use(express.json())
-
-/* a linha de comando abaixo é utilizado para ler os dados do formulário */
-/* Extended true significa que a função urlencoded conseguiu d+ecifrar, ou seja, entender os dados do formulário*/
-aplicacao.use(express.urlencoded({extended: true}))
-
-
+ 
+// A linha de comando abaixo é utilizado para ler os dados do formulário
+// Extended true : Siginifica que a funcao urlencoded conseguiu decifrar, ou seja, entender os dados do formulário
+aplicacao.use(express.urlencoded({ extended: true}))
+ 
+ 
 // via de acesso para comunicacao entre cliente (navegador) e o servidor web (nodeJS)
+ 
 const viaConexao = 3000
  
 aplicacao.use("/", rota)
@@ -33,8 +44,5 @@ aplicacao.use("/", rota)
  
 aplicacao.listen(viaConexao, () => {
     console.log("Servidor rodando e escutando na porta " + viaConexao)
-
-
 })
  
-
